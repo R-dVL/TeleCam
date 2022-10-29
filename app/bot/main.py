@@ -1,6 +1,4 @@
 import telegram
-import make_video
-import random_reply
 from telegram.ext.updater import Updater
 from telegram.update import Update
 from telegram.ext.callbackcontext import CallbackContext
@@ -14,9 +12,6 @@ ChatId = BotData.get("chat")
 bot = telegram.Bot(token = BotData.get("token"))
 updater = Updater(BotData.get("token"), use_context=True)
 
-# Bot Modes (Replantear)
-mode = {"motion" : False, "stream": False, "photo" : False}
-
 # Sends a picture, used in motion.py.
 def send_photo(path):
     bot.send_photo(ChatId, photo=open(path, 'rb'))
@@ -24,27 +19,6 @@ def send_photo(path):
 # Function to just send a message (defined in "text" when the function is called).
 def send_message(text):
 	bot.sendMessage(ChatId, text)
-
-# This command will make a video with motion_feed jpg's and send it.
-def video(update: Update, context: CallbackContext):
-    make_video.make_video()
-    bot.send_document(ChatId, document=open("../../data/video/video.mp4", "rb"))
-    bot.send_message(ChatId, random_reply.video_comment())
-
-# Starts motion thread in main.py
-def motion(update: Update, context: CallbackContext):
-    mode["stream"] = False
-    mode["motion"] = True
-
-# Starts streaming thread in main.py
-def stream(update: Update, context: CallbackContext):
-    mode["motion"] = False
-    mode["stream"] = True
-    bot.send_message(ChatId, random_reply.stream_comment())
-
-# Takes a photo, have to test it
-def foto(update: Update, context: CallbackContext):
-    mode["photo"] = True
     
 # I use this command just to know if the bot is running.
 def start(update: Update, context: CallbackContext):
@@ -61,10 +35,6 @@ def unknown(update: Update, context: CallbackContext):
 
 # Response to commands introduced in chat.
 def start_bot():
-    updater.dispatcher.add_handler(CommandHandler('foto', foto))
-    updater.dispatcher.add_handler(CommandHandler('video', video))
-    updater.dispatcher.add_handler(CommandHandler('motion', motion))
-    updater.dispatcher.add_handler(CommandHandler('stream', stream))
     updater.dispatcher.add_handler(CommandHandler('start', start))
     updater.dispatcher.add_handler(CommandHandler('help', help))
     updater.dispatcher.add_handler(MessageHandler(Filters.command, unknown))

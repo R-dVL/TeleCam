@@ -1,7 +1,7 @@
 import random
 
 comments = {"motion": ["Por aquí ando perris!", "Mira que yaski.", "Er gato al aparato.", "Illo que pasa venid ya."],
-            "stream": ["Abro stream!", "Illo seguirme en el Twitch.", "Darme dinero."],
+            "stream": ["Abro stream! http://192.168.1.142:8000", "Illo seguirme en el Twitch: http://192.168.1.142:8000", "Darme dinero: http://192.168.1.142:8000"],
             "video": ["Ahi va mi último clip!", "Mira la pila werta que he dao.", "Dale like ome.", "Mamá que estoy bien.."],
             "foto": ["Quien anda ahí!", "Serfie!", "Sargo wapo?", "Para ya paparazzi."]
             }

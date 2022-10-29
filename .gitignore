@@ -129,3 +129,5 @@ dmypy.json
 .pyre/
 
 # Folders
+data/photo
+data/video
