@@ -1,18 +1,6 @@
-import telegram
-from telegram.ext.updater import Updater
-from telegram.update import Update
-from telegram.ext.callbackcontext import CallbackContext
-from telegram.ext.commandhandler import CommandHandler
-from telegram.ext.messagehandler import MessageHandler
-from telegram.ext.filters import Filters
 from .setup import *
 import camera
 import random_reply
-
-# Setup
-ChatId = BotData.get("chat")
-bot = telegram.Bot(token = BotData.get("token"))
-updater = Updater(BotData.get("token"), use_context=True)
 
 # Send picture method
 def send_photo(path):
