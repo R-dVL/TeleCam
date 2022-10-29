@@ -1,6 +1,6 @@
 import json
 
-f = open("/home/rdvl/Documents/GitHub/Python-TeleCam/data/config/config.json")
+f = open("config.json")
 data = json.load(f)
 
 for key, val in data["bot"].items():

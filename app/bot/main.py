@@ -6,6 +6,8 @@ from telegram.ext.commandhandler import CommandHandler
 from telegram.ext.messagehandler import MessageHandler
 from telegram.ext.filters import Filters
 from .setup import *
+import camera
+import random_reply
 
 # Setup
 ChatId = BotData.get("chat")
@@ -19,6 +21,13 @@ def send_photo(path):
 # Function to just send a message (defined in "text" when the function is called).
 def send_message(text):
 	bot.sendMessage(ChatId, text)
+
+# Command to take a photo
+def foto(update: Update, context: CallbackContext):
+    camera.capture("/home/rdvl/Documents/GitHub/Python-TeleCam/data/photo/photocmd.jpg")
+    bot.send_message(random_reply.photo_comment())
+    bot.send_photo("/home/rdvl/Documents/GitHub/Python-TeleCam/data/photo/photocmd.jpg")
+    
     
 # I use this command just to know if the bot is running.
 def start(update: Update, context: CallbackContext):
@@ -35,6 +44,7 @@ def unknown(update: Update, context: CallbackContext):
 
 # Response to commands introduced in chat.
 def start_bot():
+    updater.dispatcher.add_handler(CommandHandler('foto', foto))
     updater.dispatcher.add_handler(CommandHandler('start', start))
     updater.dispatcher.add_handler(CommandHandler('help', help))
     updater.dispatcher.add_handler(MessageHandler(Filters.command, unknown))

@@ -18,3 +18,4 @@ class ConfigData:
             ConfigData.__config[name] = value
         else:
             raise NameError("Not accepted configuration.")
+        
