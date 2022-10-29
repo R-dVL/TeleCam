@@ -19,8 +19,8 @@ This project uses:
 The program is divided in submodules:
 - bot: Bot submodule, with setup, methods and replies to incoming messages.
 - camera: Camera setup and methods to stream and capture.
-- config: Setup methods and JSON with configuration information.
 - random_reply: This module is made just to add the bot some personality.
+The configuration data is stored in a JSON wich is read and stored in every submodule setup.py.
 
 ## Libraries
 ### Standard
