@@ -32,7 +32,7 @@ The program is divided in submodules:
 - PiCamera
 - GPIOZero
 
-## Open Source
+### Open Source
 - Telegram Bot
 $ pip install python-telegram-bot
 
