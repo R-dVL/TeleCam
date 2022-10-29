@@ -131,6 +131,7 @@ dmypy.json
 # Folders
 data/photo
 data/video
+/tests
 
 # Config
 config.json
