@@ -2,8 +2,7 @@
 *Raspberry Pi project used to spy my cat.*
 
 ## Functions
-The RPi will start the Telegram Bot, a webserver to stream the camera and then monitor if there is any motion in the set range for the PIR sensor.
-Once any motion is detected the Bot will send a message and photo to notify.
+The RPi will start a local webserver to stream the camera while the PIR sensor is monitoring if any motion is detected to notify it via Telegram Bot with messages and photos.
 
 The Telegram Bot will reply to some commands:
 - start: Just used to see if bot is online.
