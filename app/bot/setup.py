@@ -1,5 +1,14 @@
 import config
+import json
 
 BotData = config.ConfigData
-BotData.set("token", "5572530259:AAEXUMX0R6HmoBIy3akphPOv7bLZjPEX-Bw")
-BotData.set("chat", "-1001743800156")
+
+f = open("config.json")
+data = json.load(f)
+
+for key, val in data["bot"].items():
+    if key == "token":
+        BotData.set(key, val)
+        
+    if key == "chat":
+        BotData.set(key, val)

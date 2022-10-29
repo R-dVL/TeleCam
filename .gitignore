@@ -131,3 +131,5 @@ dmypy.json
 # Folders
 data/photo
 data/video
+
+# Config
