@@ -1,4 +1,6 @@
 import bot
+import motion
+import camera
 import threading
 
 
@@ -19,5 +21,7 @@ if __name__ == '__main__':
 
    BotThread.start()
    print("Pumuky despertando...") 
-   bot.send_message("Pumuky despertando...")
-   bot.send_message("Seleciona un modo con:\n/motion: sensor de movimiento.\n/stream: Cámara en directo.") 
+   if motion.detection() == 1:
+      camera.capture("../../data/photo/photo.jpg")
+   # bot.send_message("Pumuky despertando...")
+   # bot.send_message("Seleciona un modo con:\n/motion: sensor de movimiento.\n/stream: Cámara en directo.") 

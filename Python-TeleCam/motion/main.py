@@ -1,19 +1,13 @@
-import RPi.GPIO as GPIO
-from bot import *
-from bot import motion_comment
-import picamera
+from gpiozero import MotionSensor
 
-camera = picamera.PiCamera(resolution = "1920x1080")
-camera.rotation = 180 # My PiCamera is rotated 180º.
-camera.brightness = 60 # Dark house, had to increase brightness.
 
-pir_input = 4
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(pir_input, GPIO.IN)
-GPIO.setwarnings(False)
+pir = MotionSensor(4)
 
-def start_detection():
-    pass
-
+def detection():
+    while True:
+        pir.wait_for_motion()
+        yield 1
+        pir.wait_for_no_motion()
+        yield 0
 if __name__ == "__main__":
-    start_detection()
+    detection()
