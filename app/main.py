@@ -1,6 +1,10 @@
 import time
 import random_reply
 from setup import *
+from gpiozero import MotionSensor
+
+# PIR input setup for motion detection function
+pir = MotionSensor(4)
 
 # Using module as script to start the program
 if __name__ == '__main__':
