@@ -1,1 +1,1 @@
-from .motion import detection
+from .main import detection

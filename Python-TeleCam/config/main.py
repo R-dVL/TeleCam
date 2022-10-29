@@ -1,22 +1,20 @@
 # These methods are created in order to protect the token and chat ID of the bot
-class botdata:
+class ConfigData:
     __config = {
         "token": "",
         "chat": "",
-        "video": "",
-        "photo": ""
     }
-    __setters = ["token", "chat", "video", "photo"]
+    __setters = ["token", "chat"]
     
     # Getter method
     @staticmethod
     def get(name):
-        return bot.__conf[name]
+        return ConfigData.__config[name]
     
     # Setter method
     @staticmethod
     def set(name, value):
-        if name in botdata.__setters:
-            botdata.__config[name] = value
+        if name in ConfigData.__setters:
+            ConfigData.__config[name] = value
         else:
             raise NameError("Not accepted configuration.")

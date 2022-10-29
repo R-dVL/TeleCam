@@ -1,1 +1,1 @@
-from .stream import start_streaming
+from .main import start_streaming

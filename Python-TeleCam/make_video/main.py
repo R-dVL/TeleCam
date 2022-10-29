@@ -1,8 +1,7 @@
 import cv2
-import numpy as np
 import glob
 
-def make_video ():
+def make_video():
     img_array = []
     for filename in glob.glob('./motion_feed/*.jpg'):
         img = cv2.imread(filename)

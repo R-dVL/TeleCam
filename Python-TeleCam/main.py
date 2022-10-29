@@ -3,20 +3,21 @@ import threading
 
 
 # Thread defined, used to call boy.py
-class ThreadBot(threading.Thread):
+class Thread_1(threading.Thread):
    def __init__(self, threadID, name, counter):
       threading.Thread.__init__(self)
       self.threadID = threadID
       self.name = name
       self.counter = counter
+      
    def run(self):
-      botstart()
+      bot.start_bot()
 
-Bot = ThreadBot(1, "Thread-1", 1)
+BotThread = Thread_1(1, "Thread-1", 1)
 
 if __name__ == '__main__':
 
-   Bot.start()
+   BotThread.start()
    print("Pumuky despertando...") 
-   message("Pumuky despertando...")
-   message("Seleciona un modo con:\n/motion: sensor de movimiento.\n/stream: Cámara en directo.") 
+   bot.send_message("Pumuky despertando...")
+   bot.send_message("Seleciona un modo con:\n/motion: sensor de movimiento.\n/stream: Cámara en directo.") 
