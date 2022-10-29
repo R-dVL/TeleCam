@@ -1,6 +1,6 @@
 import time
 import random_reply
-from .setup import *
+from setup import *
 
 # Using module as script to start the program
 if __name__ == '__main__':

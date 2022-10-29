@@ -2,5 +2,12 @@
     "bot": {
         "token": "",
         "chat": ""
+    },
+
+    "camera": {
+        "resolution": "920x680",
+        "framerate": 30,
+        "rotation": 180,
+        "brightness": 60
     }
 }
