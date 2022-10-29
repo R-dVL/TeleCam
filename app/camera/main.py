@@ -34,5 +34,6 @@ def start_streaming():
     print('Server started at','http://'+address[0]+':'+str(address[1]))
     server.serve_forever()
 
+# Captures an image and saves it in the introduced path
 def capture(path):
     camera.capture(path)

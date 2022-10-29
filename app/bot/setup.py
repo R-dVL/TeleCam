@@ -4,6 +4,7 @@ import config
 # Setup
 BotData = config.ConfigData
 
+# Read data from JSON and use setters to assign Token and Chat ID
 f = open("/home/rdvl/Documents/GitHub/Python-TeleCam/app/config/config.json")
 data = json.load(f)
 
