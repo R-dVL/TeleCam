@@ -24,9 +24,9 @@ def send_message(text):
 
 # Command to take a photo and send it back
 def foto(update: Update, context: CallbackContext):
-    camera.capture("/home/rdvl/Documents/GitHub/Python-TeleCam/data/photo/photocmd.jpg")
+    camera.capture("/home/rdvl/Documents/GitHub/TeleCam/data/photo/photocmd.jpg")
     bot.send_message(random_reply.photo_comment())
-    bot.send_photo("/home/rdvl/Documents/GitHub/Python-TeleCam/data/photo/photocmd.jpg")
+    bot.send_photo("/home/rdvl/Documents/GitHub/TeleCam/data/photo/photocmd.jpg")
 
 # I use this command just to know if the bot is running.
 def start(update: Update, context: CallbackContext):
