@@ -21,8 +21,8 @@ if __name__ == '__main__':
       pir.wait_for_motion()  # Motion Start
       print("Detection.")
       time.sleep(3)
-      camera.capture("../data/photo/photo.jpg")
-      bot.send_photo("../data/photo/photo.jpg")
+      camera.capture("/home/rdvl/Documents/GitHub/TeleCam/data/photo/photo.jpg")
+      bot.send_photo("/home/rdvl/Documents/GitHub/TeleCam/data/photo/photo.jpg")
       bot.send_message(random_reply.motion_comment())
       
       pir.wait_for_no_motion()  # Motion End

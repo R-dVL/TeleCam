@@ -60,7 +60,7 @@ HTML="""
 </head>
 <body>
 <center><h1> Pumuky en riguroso directo </h1></center>
-<center><img src="stream.mjpg" width='640' height='480' autoplay playsinline></center>
+<center><img src="stream.mjpg" width='360' height='800' autoplay playsinline></center>
 </body>
 </html>
 """

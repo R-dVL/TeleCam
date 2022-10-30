@@ -1,10 +1,6 @@
 import threading
 import camera
 import bot
-from gpiozero import MotionSensor
-
-# PIR input setup for motion detection function
-pir = MotionSensor(4)
 
 # Bot thread definition
 class Thread_1(threading.Thread):

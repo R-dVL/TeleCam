@@ -133,4 +133,4 @@ dmypy.json
 
 # Personal data
 config.json
-.jpg
+data/photo/photo.jpg
