@@ -29,15 +29,15 @@ The configuration data is stored in a JSON wich is read and stored in every subm
 ## Open Source Libraries
 - Telegram Bot
 
-$ pip install python-telegram-bot
+> $ pip install python-telegram-bot
 
 - OpenCV
 
-$ pip install opencv-python
+> $ pip install opencv-python
 
 - Pyshine
 
-$ pip install pyshine
+> $ pip install pyshine
 
 --------------------------------------------
 
