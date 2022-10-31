@@ -26,18 +26,7 @@ The program is divided in submodules:
 
 The configuration data is stored in a JSON wich is read and stored in every submodule setup.py.
 
-## Libraries
-### Standard
-- Random
-- Time
-- Threading
-- Json
-
-### Raspberry
-- PiCamera
-- GPIOZero
-
-### Open Source
+## Open Source Libraries
 - Telegram Bot
 
 $ pip install python-telegram-bot
