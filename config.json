@@ -1,17 +1,17 @@
 {
     "bot": {
-        "token": "5572530259:AAEXUMX0R6HmoBIy3akphPOv7bLZjPEX-Bw",
-        "chat": "-1001743800156"
+        "token": "",
+        "chat": ""
     },
 
     "camera": {
-        "resolution": "1920x1080",
-        "framerate": 30,
-        "rotation": 180,
-        "brightness": 60
+        "resolution": "",
+        "framerate": ,
+        "rotation": ,
+        "brightness": 
     },
 
     "pir": {
-        "pin": 4
+        "pin": 
     }
 }
