@@ -14,7 +14,7 @@ The Telegram Bot will reply to some commands:
 This project uses:
 
 - Raspberry Pi (tested and working in RPi 3B+).
-- Picamera (migrating to OpenCV and Flask for major compatibility).
+- Picamera.
 - PIR Sensor.
 
 ## Program
@@ -22,9 +22,10 @@ The program is divided in submodules:
 
 - bot: Bot submodule, with setup, methods and replies to incoming messages.
 - camera: Camera setup and methods to stream and capture.
+- motion : Setup of pir GPIO pin and program to detect motion and notify it.
 - random_reply: This module is made just to add the bot some personality.
 
-The configuration data is stored in a JSON wich is read and stored in every submodule setup.py.
+The configuration data (Camera, Bot and PIR) is stored in a JSON wich is read and stored in every setup.py submodule.
 
 ## Open Source Libraries
 - Telegram Bot
